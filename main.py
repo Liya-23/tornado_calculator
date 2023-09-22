@@ -23,6 +23,16 @@ class MainHandler(tornado.web.RequestHandler):
         clear = self.get_argument("clear")
         erase = self.get_argument("erase")
 
+        result = str(int(one) + int(two))
+
+        # Write the result as plain text
+        self.write(textarea%stextarea % result)
+
+        # HTML content to be written to the pp element
+        # content = "This is some content for the textarea element textarea."
+
+        # Write the content to the response
+        # self.write(textarea%stextarea % content)
 
 def make_app():
     return tornado.web.Application([ 
@@ -35,5 +45,3 @@ if __name__ == "__main__":
     app.listen(7894)
     print("somethin on port 7894")
     tornado.ioloop.IOLoop.current().start()
-	# print("something on port 7894")
-	
