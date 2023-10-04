@@ -5,7 +5,7 @@ You import the required libraries/modules:
 tornado.web and tornado.ioloop for creating a web application.
 gtts.gTTS for text-to-speech conversion.
 os for interacting with the operating system.
-You define the MainHandler class, which handles both GET and POST requests:
+You define the MainHandler class, which handles both GET and POST requests: 
 
 The get method renders the HTML page located at "web\index.html" when the user accesses the root URL ("/").
 The post method is responsible for processing the form data submitted by the user. It extracts the text from the form, specifies the language as English ('en'), converts the text to speech using gTTS, saves it to an MP3 file with a user-specified name, and then plays the MP3 file using the os.system function.
